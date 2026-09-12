@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-09-12T15:12:00+05:30",
+  "timezone": "Asia/Calcutta",
+  "summary": {
+    "overall": "PARTIAL",
+    "ok": 2,
+    "issue": 1,
+    "blocked": 4
+  },
+  "checks": [
+    {
+      "id": "sonicwall-boss",
+      "name": "Firewall — Boss house (SonicWall TZ370)",
+      "status": "OK",
+      "detail": "WAN X1–X4 green/up. X5–X7 and WAN U0 unassigned. Dashboard showed ~5.71 Mbps and 4,322 active connections (internet traffic present).",
+      "source": "https://59.144.171.122/sonicui/7/login/#/"
+    },
+    {
+      "id": "fortigate-office",
+      "name": "Firewall — Office (FortiGate F80)",
+      "status": "BLOCKED",
+      "detail": "Portal login / WAN check not completed yet.",
+      "source": "https://122.160.233.250:444/login?redir=%2F"
+    },
+    {
+      "id": "wifi-boss",
+      "name": "WiFi — Boss house",
+      "status": "BLOCKED",
+      "detail": "Controller at 192.168.0.10 not checked yet (may need VPN/reachability from agent network).",
+      "source": "http://192.168.0.10/"
+    },
+    {
+      "id": "wifi-office",
+      "name": "WiFi — Office",
+      "status": "BLOCKED",
+      "detail": "Controller at 172.49.5.80 not checked yet.",
+      "source": "http://172.49.5.80/"
+    },
+    {
+      "id": "acronis",
+      "name": "Acronis — last backups",
+      "status": "ISSUE",
+      "detail": "Recent runs: 12 OK, 1 warning, no outright Failed. Warning: ALOK GUPTA Sep 12 03:01 AM — backup-registration / Microsoft Graph permission. Many Users inventory accounts Not protected / Never.",
+      "highlights": [
+        "OK sample: Mohit 07:15, Alok 05:13, SK Goyal 04:35, Ravi Gosain 04:20, Rahul Chamaria 03:14, Vinay Jain 02:35",
+        "Warning: ALOK GUPTA 03:01 AM (registration / Graph permission)"
+      ],
+      "source": "https://in01-cloud.acronis.com/ui/#/dashboards"
+    },
+    {
+      "id": "commvault",
+      "name": "Commvault — last backups",
+      "status": "BLOCKED",
+      "detail": "Login/dashboard check in progress or not finished at page publish time.",
+      "source": "https://122.160.233.250/commandcenter/#/dashboard/commcell"
+    },
+    {
+      "id": "trendmicro",
+      "name": "Trend Micro Worry-Free — alerts & health",
+      "status": "BLOCKED",
+      "detail": "Portal check not completed yet.",
+      "source": "https://tm.login.trendmicro.com/authenticate/operator/false/wfbss-nabu"
+    }
+  ]
+}
