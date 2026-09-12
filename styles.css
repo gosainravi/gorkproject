@@ -1,28 +1,12 @@
 :root {
-  color-scheme: light dark;
-  --bg: #0f1419;
-  --card: #1a2332;
-  --text: #e8eef7;
-  --muted: #9aa8b8;
-  --accent: #6cb6ff;
-  --accent-2: #3dd68c;
-  --ring: rgba(108, 182, 255, 0.35);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+  background: #f5f5f5;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f4f7fb;
-    --card: #ffffff;
-    --text: #142033;
-    --muted: #5b6b7c;
-    --accent: #2563eb;
-    --accent-2: #059669;
-    --ring: rgba(37, 99, 235, 0.25);
-  }
+* {
+  box-sizing: border-box;
 }
-
-* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -30,63 +14,53 @@ body {
   display: grid;
   place-items: center;
   padding: 1.5rem;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%),
-    radial-gradient(900px 500px at 100% 0%, color-mix(in oklab, var(--accent-2) 18%, transparent), transparent 55%),
-    var(--bg);
-  color: var(--text);
 }
 
 .card {
-  width: min(28rem, 100%);
-  background: var(--card);
-  border: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
-  border-radius: 1.25rem;
-  padding: 2rem 1.75rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  width: min(24rem, 100%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .eyebrow {
   margin: 0 0 0.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #666;
 }
 
 h1 {
-  margin: 0 0 0.6rem;
-  font-size: clamp(2.2rem, 6vw, 3rem);
-  line-height: 1.1;
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
 }
 
 .lead {
-  margin: 0 0 1.5rem;
-  color: var(--muted);
-  line-height: 1.5;
+  margin: 0 0 1.25rem;
+  color: #555;
+  line-height: 1.4;
 }
 
 button {
-  appearance: none;
-  border: 0;
-  border-radius: 999px;
-  padding: 0.7rem 1.2rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
   font: inherit;
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, var(--accent), color-mix(in oklab, var(--accent-2) 70%, var(--accent)));
+  background: #1a1a1a;
+  color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 0 0 var(--ring);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-button:hover { transform: translateY(-1px); }
-button:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--ring); }
+button:hover {
+  background: #333;
+}
 
 .msg {
-  min-height: 1.5rem;
-  margin: 1rem 0 0;
-  color: var(--accent-2);
+  min-height: 1.25rem;
+  margin: 0.75rem 0 0;
+  color: #0a7;
   font-weight: 600;
 }
